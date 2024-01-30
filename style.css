@@ -19,7 +19,6 @@ body{
     justify-content: center;
 }
 .temp {
-<<<<<<< HEAD
     padding: 1rem;
     font-size: 6rem;
 }
@@ -30,13 +29,6 @@ body{
 }
 .time_location > span {
     font-size: 1.2rem;
-=======
-    padding: 2rem;
-    font-size: 2.75rem;
-}
-.time_location > p {
-    font-size: 2rem;
->>>>>>> b7c48cb28214245b9c6b6d3f608805128ec846c9
     margin: 0%;
     padding: 0%;
 }
@@ -47,11 +39,7 @@ body{
     align-items: center;
 }
 .weather_condition > span {
-<<<<<<< HEAD
     font-size: 1rem;
-=======
-    font-size: .75rem;
->>>>>>> b7c48cb28214245b9c6b6d3f608805128ec846c9
     margin: 0%;
     padding: 0%;
     letter-spacing: 2px;
@@ -88,13 +76,8 @@ form > input {
 }
 form > button{
     margin-left: 2%;
-<<<<<<< HEAD
     background: transparent;
     border: none;
-=======
-    background-color: rgb(3, 24, 38);
-    border-color: aliceblue;
->>>>>>> b7c48cb28214245b9c6b6d3f608805128ec846c9
     cursor: pointer;
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -104,7 +87,6 @@ form > button{
     background-color: transparent;
     border-bottom: 2px solid white;
 }
-<<<<<<< HEAD
 .dev_details{
     position: absolute;
     right: 2%;
@@ -115,5 +97,3 @@ form > button{
 .dev_details > p > a{
     color: white;
 }
-=======
->>>>>>> b7c48cb28214245b9c6b6d3f608805128ec846c9
