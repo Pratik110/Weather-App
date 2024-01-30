@@ -5,7 +5,9 @@ let dayArr = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Satur
 let body = document.querySelector("body");
 form.addEventListener("submit",function(e){
     // console.log(e);
+    //Prevent Default Behaviour (stops from refreshing)
     e.preventDefault();
+    //City we're searching for is target
     target = searchField.value;
     fetchData(target);
 });
@@ -14,6 +16,7 @@ async function fetchData(target){
     let url = `https://api.weatherapi.com/v1/current.json?key=0db29e81f7f34fa4826173838242901&q=${target}&aqi=no`;
     let response =await fetch(url);
     // console.log(response);
+    //converts response to JSON [response we got by hitting the API]
     let data = await response.json();
     // console.log(data);
     let currentTemp = data.current.temp_c;
@@ -47,5 +50,5 @@ function updateDOM(currentTemp,currentCondition,locationName,localTime,condition
     currentConditionUI.innerText = currentCondition;
     localTimeUI.innerText = `${time} | ${day} | ${date}`;
 }
-
+//Default Call
 fetchData(target);
