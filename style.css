@@ -19,17 +19,16 @@ body{
     justify-content: center;
 }
 .temp {
-    padding: 5rem;
-    font-size: 10rem;
-
+    padding: 1rem;
+    font-size: 6rem;
 }
 .time_location > p {
-    font-size: 10rem;
+    font-size: 3rem;
     margin: 0%;
     padding: 0%;
 }
 .time_location > span {
-    font-size: 4rem;
+    font-size: 1.2rem;
     margin: 0%;
     padding: 0%;
 }
@@ -41,14 +40,12 @@ body{
 
 }
 .weather_condition > span {
-    font-size: 2rem;
+    font-size: 1rem;
     margin: 0%;
     padding: 0%;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 }
 .weather_condition > img {
-    height: 12rem;
-    width: 12rem;
     margin: 0%;
     padding: 10%;
 }
@@ -80,9 +77,8 @@ form > input {
 }
 form > button{
     margin-left: 2%;
-    background-color: rgb(3, 24, 38);
-    border-color: aliceblue;
-    font-size: 1rem;
+    background: transparent;
+    border: none;
     cursor: pointer;
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -91,4 +87,14 @@ form > button{
 .searchfield {
     background-color: transparent;
     border-bottom: 2px solid white;
+}
+.dev_details{
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    color: white;
+    font-size: 12px;
+}
+.dev_details > p > a{
+    color: white;
 }

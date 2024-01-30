@@ -1,7 +1,8 @@
 let form = document.querySelector("form");
 let searchField = document.querySelector(".seachField");
 let target = "New Delhi"
-
+let dayArr = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+let body = document.querySelector("body");
 form.addEventListener("submit",function(e){
     // console.log(e);
     e.preventDefault();
@@ -30,16 +31,21 @@ async function fetchData(target){
 }
 
 function updateDOM(currentTemp,currentCondition,locationName,localTime,conditionEmoji){
+    let datetimeArr = localTime.split(" ");
+    let date = datetimeArr[0];
+    let time = datetimeArr[1];
+    let dayNum = new Date(date).getDay(); //will give day number
+    let day = dayArr[dayNum-1];
     let currentTempUI = document.querySelector(".temp");
     let conditionEmojiUI = document.querySelector(".weather_condition img");
     let currentConditionUI = document.querySelector(".weather_condition span");
     let locationNameUI = document.querySelector(".time_location p");
     let localTimeUI = document.querySelector(".time_location span");
-    currentTempUI.innerText = `${currentTemp}  °C`;
+    currentTempUI.innerText = `${currentTemp} °C`;
     conditionEmojiUI.src = conditionEmoji;
     locationNameUI.innerText = locationName;
     currentConditionUI.innerText = currentCondition;
-    localTimeUI.innerText = localTime;
+    localTimeUI.innerText = `${time} | ${day} | ${date}`;
 }
 
 fetchData(target);
